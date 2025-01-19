@@ -1,23 +1,27 @@
 import React from 'react';
-import Header from './components/Header.tsx';
-import Home from './components/Home.tsx';
-import Footer from './components/Footer.tsx';
-import Entrepreneurs from './components/Entrepreneurs.tsx';
-import Investors from './components/Investors.tsx';
-import Login from './components/Login.tsx';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Home from './components/Home';
+import Footer from './components/Footer';
+import Entrepreneurs from './components/Entrepreneurs';
+import Investors from './components/Investors';
+import Login from './components/Login';
 
 const App: React.FC = () => {
   return (
-    <div>
+    <Router>
       <Header />
-       <Home />
-       <Entrepreneurs />
-       <Investors />
-       <Login />
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/entrepreneurs" element={<Entrepreneurs />} />
+        <Route path="/investors" element={<Investors />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
       <Footer />
-    </div>
+    </Router>
   );
 };
 
 export default App;
+
 
