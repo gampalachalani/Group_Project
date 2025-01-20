@@ -1,8 +1,9 @@
 import React from 'react'
+import './Login.css'
 
 const Login : React.FC = () => { 
   return (
-    <div className='wrapper'>
+    <div className='container'>
       <div className='form-box login'>
 
         <form action=''>
