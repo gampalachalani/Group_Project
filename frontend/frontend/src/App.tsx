@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Entrepreneurs from './components/Entrepreneurs';
 import Investors from './components/Investors';
 import Login from './components/Login';
+import Signup from './components/Signup';
 
 const App: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const App: React.FC = () => {
         <Route path="/entrepreneurs" element={<Entrepreneurs />} />
         <Route path="/investors" element={<Investors />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
       <Footer />
     </Router>

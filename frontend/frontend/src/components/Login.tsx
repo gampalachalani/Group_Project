@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Login: React.FC = () => { 
+const Login : React.FC = () => { 
   return (
     <div className='wrapper'>
       <div className='form-box login'>
@@ -19,7 +19,13 @@ const Login: React.FC = () => {
 
           <div className='remember-forgot'>
             <label><input type='checkbox'/>Remeber me</label>
+            <a href='#'>Forgot password</a>
+          </div>
 
+          <button type='submit'>Login</button>
+
+          <div className='registr-link'>
+            <p>Don't have an account? <a href='#'>Signup</a></p>
           </div>
         </form>
 

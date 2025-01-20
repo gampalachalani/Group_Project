@@ -16,7 +16,7 @@ const Header: React.FC = () => {
       Funds
     </a>
     <a className="navbar-brand" href="/Login">
-      Login
+      Signin
     </a>
     <a className="navbar-brand" href="/signup">
       Signup
