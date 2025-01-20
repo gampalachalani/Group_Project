@@ -15,10 +15,10 @@ const Header: React.FC = () => {
     <a className="navbar-brand" href="/Funding">
       Funds
     </a>
-    <a className="navbar-brand" href="/Login">
+    <a className="navbar-brand" href="/sign in">
       Signin
     </a>
-    <a className="navbar-brand" href="/signup">
+    <a className="navbar-brand" href="/sign up">
       Signup
     </a>
   </div>

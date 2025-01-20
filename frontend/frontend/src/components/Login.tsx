@@ -7,7 +7,7 @@ const Login : React.FC = () => {
 
         <form action=''>
 
-          <h1>Login</h1>
+          <h1>Sign In</h1>
           <div className='input-box'>
             <input type='text'
             placeholder='Username' required />
@@ -18,14 +18,14 @@ const Login : React.FC = () => {
           </div>
 
           <div className='remember-forgot'>
-            <label><input type='checkbox'/>Remeber me</label>
-            <a href='#'>Forgot password</a>
+            <label><input type='checkbox'/>Remeber me  </label>
+            <a href='#'> Forgot password</a>
           </div>
 
-          <button type='submit'>Login</button>
+          <button type='submit'>Sign In</button>
 
           <div className='registr-link'>
-            <p>Don't have an account? <a href='#'>Signup</a></p>
+            <p>Don't have an account?  <a href="/signup">Signup</a></p>
           </div>
         </form>
 
