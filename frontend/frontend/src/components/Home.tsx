@@ -1,6 +1,5 @@
 import React from 'react';
-import Header from './Header.tsx';
-import Footer from './Footer.tsx';
+import './Home.css'
 
 const Home : React.FC = () => {
   return (
