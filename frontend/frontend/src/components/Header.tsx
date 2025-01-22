@@ -7,7 +7,7 @@ const Header: React.FC = () => {
       <div className="container">
       <div className="logo">
           <a href="/home">
-            <img src="/C:/Users/MSI/Desktop/Group_project/Frontend/frontend/src/assets/images/logo.png" alt="Company Logo" />
+            <img src="./assets/images/logo.png" alt="Company Logo" />
           </a>
         </div>
       <div className="left-links">
