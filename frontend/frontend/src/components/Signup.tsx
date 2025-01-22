@@ -4,20 +4,21 @@ import './Signup.css'
 const Signup : React.FC = () => { 
   return (
     <div className='wrapper'>
-      <div className='form-box signup'>
+      <div className='signup-form'>
 
         <form action=''>
 
           <h1>Sign Up</h1>
-          <div className='input-box'>
-            <input type='email'
-            placeholder='Email' required />
-          </div>
-          <div className='input-box'>
+          
+          <div className='signup-input'>
             <input type='text'
             placeholder='Username' required />
           </div>
-          <div className='input-box'>
+          <div className='signup-input'>
+            <input type='email'
+            placeholder='Email' required />
+          </div>
+          <div className='signup-input'>
             <input type='password'
             placeholder='Password' required />
           </div>
