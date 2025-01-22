@@ -1,50 +1,96 @@
-/* General Navbar Styling */
 .navbar {
-    background-color: #007bff; /* Primary blue color */
-    padding: 10px 20px;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Navbar Links Container */
-  .navbar .container {
-    display: flex;
-    gap: 20px; /* Space between links */
-  }
-  
-  /* Navbar Links */
-  .navbar .nav-link {
-    color: white; /* White text color for links */
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.2s;
-  }
-  
-  /* Hover and Active Effects */
-  .navbar .nav-link:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    transform: scale(1.05); /* Slight zoom effect */
-  }
-  
-  .navbar .nav-link:active {
-    transform: scale(0.95); /* Slightly shrink on click */
-  }
-  
-  /* Responsive Design for Small Screens */
-  @media (max-width: 768px) {
-    .navbar .container {
+  background-color: #05213e; 
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.navbar .container {
+  display: flex;
+  gap: 20px; 
+  align-items: center;
+}
+
+
+.navbar .nav-link {
+  color: white; 
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+
+.navbar .nav-link:hover {
+  background-color: #c0dfff; 
+  transform: scale(1.05); 
+}
+
+.navbar .nav-link:active {
+  transform: scale(0.95); 
+}
+
+
+.navbar .search-bar {
+  display: flex;
+  align-items: center;
+  background-color: rgb(156, 156, 156);
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  padding: 5px 10px;
+  width: 250px; 
+}
+
+.navbar .search-bar input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+.navbar .search-bar button:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+/* Align Links and Search Bar in Separate Sections */
+.navbar .left-links {
+  display: flex;
+  gap: 20px; /* Space between left links */
+  flex: 1; /* Take up available space */
+}
+
+.navbar .right-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+  .navbar {
       flex-direction: column;
+      align-items: flex-start;
       gap: 10px;
-    }
-  
-    .nav-link {
-      text-align: center;
-      width: 100%;
-    }
   }
-  
+
+  .navbar .container {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+  }
+
+  .nav-link {
+      text-align: left;
+      width: 100%;
+  }
+
+  .navbar .search-bar {
+      width: 100%; /* Make search bar full width on small screens */
+  }
+}
+
