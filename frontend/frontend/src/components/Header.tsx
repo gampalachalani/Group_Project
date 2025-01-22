@@ -5,6 +5,11 @@ const Header: React.FC = () => {
   return (
     <nav className="navbar">
       <div className="container">
+      <div className="logo">
+          <a href="/home">
+            <img src="/C:/Users/MSI/Desktop/Group_project/Frontend/frontend/src/assets/images/logo.png" alt="Company Logo" />
+          </a>
+        </div>
       <div className="left-links">
         <a className="nav-link" href="/home">Home</a>
         <a className="nav-link" href="/entrepreneurs">Entrepreneurs</a>
