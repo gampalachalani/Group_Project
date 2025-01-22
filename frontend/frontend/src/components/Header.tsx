@@ -1,5 +1,6 @@
 import React from 'react';
 import './Header.css';
+import logo from '../components/assets/logo1.png';
 
 const Header: React.FC = () => {
   return (
@@ -7,7 +8,7 @@ const Header: React.FC = () => {
       <div className="container">
       <div className="logo">
           <a href="/home">
-            <img src="./assets/images/logo.png" alt="Company Logo" />
+            <img src={logo} alt="Company Logo" />
           </a>
         </div>
       <div className="left-links">
