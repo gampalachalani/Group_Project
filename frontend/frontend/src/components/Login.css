@@ -8,6 +8,16 @@
     color: white;
     font-family: 'Arial', sans-serif;
   }
+
+  .cmp-logo {
+      margin-bottom: 20px; 
+      text-align: center;
+  }
+
+  .cmp-logo img{
+    max-width: 150px;
+    height: auto;
+  }
   
 
   .form-box {

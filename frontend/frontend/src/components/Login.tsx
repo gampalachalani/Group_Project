@@ -1,9 +1,13 @@
 import React from 'react'
 import './Login.css'
+import cmplogo from '../components/assets/logo1.png';
 
 const Login : React.FC = () => { 
   return (
     <div className='Login'>
+      <div className='cmp-logo'>
+    <img src={cmplogo} alt='Company Logo' />
+  </div>
       <div className='form-box login'>
 
         <form action=''>
