@@ -1,4 +1,4 @@
-.container {
+.Login {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,4 +100,4 @@
   .registr-link a:hover {
     text-decoration: underline;
   }
-  
+

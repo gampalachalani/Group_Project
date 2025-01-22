@@ -1,9 +1,10 @@
 import React from 'react'
+import './Signup.css'
 
 const Signup : React.FC = () => { 
   return (
     <div className='wrapper'>
-      <div className='form-box login'>
+      <div className='form-box signup'>
 
         <form action=''>
 

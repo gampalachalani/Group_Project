@@ -7,6 +7,7 @@ import Entrepreneurs from './components/Entrepreneurs';
 import Investors from './components/Investors';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import './App.css'
 
 const App: React.FC = () => {
   return (

@@ -3,7 +3,7 @@ import './Login.css'
 
 const Login : React.FC = () => { 
   return (
-    <div className='container'>
+    <div className='Login'>
       <div className='form-box login'>
 
         <form action=''>
