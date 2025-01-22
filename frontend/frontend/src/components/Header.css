@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #05213e; 
+  background-color: #1a436f; 
   padding: 10px 20px;
   font-family: Arial, sans-serif;
   display: flex;
@@ -39,8 +39,8 @@
 .navbar .search-bar {
   display: flex;
   align-items: center;
-  background-color: rgb(156, 156, 156);
-  border: 1px solid #e0e0e0;
+  background-color: rgb(159, 159, 159);
+  border: 1px solid #606060;
   border-radius: 20px;
   padding: 5px 10px;
   width: 250px; 
@@ -53,15 +53,10 @@
   font-size: 14px;
 }
 
-.navbar .search-bar button:hover {
-  color: #0056b3; /* Darker blue on hover */
-}
-
-/* Align Links and Search Bar in Separate Sections */
 .navbar .left-links {
   display: flex;
-  gap: 20px; /* Space between left links */
-  flex: 1; /* Take up available space */
+  gap: 20px; 
+  flex: 1; 
 }
 
 .navbar .right-links {
@@ -69,28 +64,3 @@
   gap: 20px;
   align-items: center;
 }
-
-/* Responsive Design for Small Screens */
-@media (max-width: 768px) {
-  .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
-  }
-
-  .navbar .container {
-      flex-direction: column;
-      align-items: flex-start;
-      width: 100%;
-  }
-
-  .nav-link {
-      text-align: left;
-      width: 100%;
-  }
-
-  .navbar .search-bar {
-      width: 100%; /* Make search bar full width on small screens */
-  }
-}
-
