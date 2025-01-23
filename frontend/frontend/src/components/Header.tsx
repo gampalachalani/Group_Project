@@ -26,7 +26,7 @@ const Header: React.FC = () => {
         <div className="right-links">
         <a className="nav-link" href="/funding">Funds</a>
         <a className="nav-link" href="/login">Sign In</a>
-        <a className="nav-link signup-btn" href="/signup">Sign Up</a>
+        <a className="nav-link" href="/signup">Sign Up</a>
       </div>
     
     </div>
