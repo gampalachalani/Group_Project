@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.css';
 import logo from '../components/assets/logo1.png';
+import search from '../components/assets/search.png'
 
 const Header: React.FC = () => {
   return (
@@ -18,13 +19,14 @@ const Header: React.FC = () => {
       </div>
 
         <div className="search-bar">
+          <img src={search} alt="Search" />
           <input type="text" placeholder="Search..." />
         </div>
 
         <div className="right-links">
         <a className="nav-link" href="/funding">Funds</a>
         <a className="nav-link" href="/login">Sign In</a>
-        <a className="nav-link signup-btn" href="/signup">Sign Up</a>
+        <a className="nav-link" href="/signup">Sign Up</a>
       </div>
     
     </div>

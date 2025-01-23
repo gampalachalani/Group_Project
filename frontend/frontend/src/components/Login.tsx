@@ -5,6 +5,7 @@ import cmplogo from '../components/assets/logo1.png';
 const Login : React.FC = () => { 
   return (
     <div className='Login'>
+      <div className='form-container'>
       <div className='cmp-logo'>
     <img src={cmplogo} alt='Company Logo' />
   </div>
@@ -14,17 +15,17 @@ const Login : React.FC = () => {
 
           <h1>Sign In</h1>
           <div className='input-box'>
-            <input type='text'
-            placeholder='Username' required />
+            <input type='email'
+            placeholder='Enter your Email' required />
           </div>
           <div className='input-box'>
             <input type='password'
-            placeholder='Password' required />
+            placeholder='Enter your Password' required />
           </div>
 
           <div className='remember-forgot'>
             <label><input type='checkbox'/>Remeber me  </label>
-            <a href='#'> Forgot password</a>
+            <a href='/forgotpassword'> Forgot password</a>
           </div>
 
           <button type='submit'>Sign In</button>
@@ -34,6 +35,7 @@ const Login : React.FC = () => {
           </div>
         </form>
 
+      </div>
       </div>  
     </div>
   )

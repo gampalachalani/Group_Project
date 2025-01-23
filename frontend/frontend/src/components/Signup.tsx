@@ -1,9 +1,14 @@
 import React from 'react'
 import './Signup.css'
+import cmplogo from '../components/assets/logo1.png';
 
 const Signup : React.FC = () => { 
   return (
     <div className='wrapper'>
+      <div className='signup-container'>
+      <div className='cmp-logo'>
+      <img src={cmplogo} alt='Company Logo' />
+        </div>
       <div className='signup-form'>
 
         <form action=''>
@@ -12,15 +17,23 @@ const Signup : React.FC = () => {
           
           <div className='signup-input'>
             <input type='text'
-            placeholder='Username' required />
+            placeholder='Enter your first name' required />
+          </div>
+          <div className='signup-input'>
+            <input type='text'
+            placeholder='Enter your second name' required />
           </div>
           <div className='signup-input'>
             <input type='email'
-            placeholder='Email' required />
+            placeholder='Enter your email' required />
           </div>
           <div className='signup-input'>
             <input type='password'
-            placeholder='Password' required />
+            placeholder='Enter your password' required />
+          </div>
+          <div className='signup-input'>
+            <input type='password'
+            placeholder='Confirm your password' required />
           </div>
           
           <button type='submit'>Sign Up</button>
@@ -31,7 +44,8 @@ const Signup : React.FC = () => {
     
         </form>
 
-      </div>  
+      </div> 
+      </div> 
     </div>
   )
 }
