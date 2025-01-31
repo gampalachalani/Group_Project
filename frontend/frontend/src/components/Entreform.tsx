@@ -16,7 +16,8 @@ const Entreform: React.FC = () => {
       telNumber: "",
       webUrl: "",
       contentType: "",
-      image: ""
+      imageName: "",
+
     });
 
     const [errors, setErrors] = useState<{ [key: string]: string }>({});
@@ -165,18 +166,36 @@ const Entreform: React.FC = () => {
       
     <Form.Group className="mb-3" controlId="formWebUrl">
       <Form.Label>Web URL</Form.Label>
-      <Form.Control type="url" placeholder="Enter Web URL" />
+      <Form.Control 
+      type="url" 
+      name="weburl"
+      placeholder="Enter Web URL"
+      value={formData.contentType}
+      onChange={handleChange} />
     </Form.Group>
 
-    <Form.Group className="mb-3" controlId="formImageData">
-      <Form.Label>Image File</Form.Label>
-      <Form.Control type="file" />
-    </Form.Group>
+
+    <Form.Group className="mb-3" controlId="formImageName">
+          <Form.Label>Image File</Form.Label>
+          <Form.Control
+            type="file"
+            name="imageName"
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setFormData({ ...formData, imageName: e.target.value })
+            }
+          />
+        </Form.Group>
 
     <Form.Group className="mb-3" controlId="formContentType">
-      <Form.Label>Content Type</Form.Label>
-      <Form.Control type="text" placeholder="Enter Content Type" />
-    </Form.Group>
+          <Form.Label>Content Type</Form.Label>
+          <Form.Control
+            type="text"
+            name="contentType"
+            placeholder="Enter Content Type"
+            value={formData.contentType}
+            onChange={handleChange}
+          />
+        </Form.Group>
 
     <Button variant="primary" type="submit">
       Submit
