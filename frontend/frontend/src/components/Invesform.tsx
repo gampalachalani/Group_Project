@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Alert from 'react-bootstrap/Alert';
+import './Invesform.css';
+import cmplogo from '../components/assets/logo1.png';
+
 
 const InvestorForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -68,8 +71,14 @@ const InvestorForm: React.FC = () => {
         </Alert>
       )}
 
-      
-      <Form onSubmit={handleSubmit}>
+<div className="investform-cont">
+      <div className="invest-container">
+        <div className='cmp-logo'>
+             <img src={cmplogo} alt='Company Logo' />
+        </div>
+    <Form className="invest-form" onSubmit={handleSubmit}>
+        <h1>Investor Form</h1>
+
         <Form.Group className="mb-3" controlId="formInvestorName">
           <Form.Label>Investor Name</Form.Label>
           <Form.Control
@@ -187,6 +196,8 @@ const InvestorForm: React.FC = () => {
           Submit
         </Button>
       </Form>
+      </div>
+      </div>
     </>
   );
 };
