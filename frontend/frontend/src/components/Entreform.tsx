@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Alert from 'react-bootstrap/Alert';
+import './Entreform.css';
+import cmplogo from '../components/assets/logo1.png';
 
 
 const Entreform: React.FC = () => {
@@ -74,7 +76,14 @@ const Entreform: React.FC = () => {
           </Alert>
         )}
 
-    <Form onSubmit={handleSubmit}>
+    <div className="entreform-cont">
+      <div className="entre-container">
+      <div className='cmp-logo'>
+      <img src={cmplogo} alt='Company Logo' />
+        </div>
+    <Form className="entre-form" onSubmit={handleSubmit}>
+        <h1>Entrepreneur Form</h1>
+
       <Form.Group className="mb-3" controlId="formEnterpriseName">
         <Form.Label>Enterprise Name</Form.Label>
         <Form.Control
@@ -197,11 +206,12 @@ const Entreform: React.FC = () => {
           />
         </Form.Group>
 
-    <Button variant="primary" type="submit">
-      Submit
-    </Button>
-  </Form>
-
+      <Button variant="primary" type="submit">
+        Submit
+      </Button>
+    </Form>
+   </div>
+  </div>
   </>
   );
 };
