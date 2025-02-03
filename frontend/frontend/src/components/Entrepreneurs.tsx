@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { getAllEnterprises } from "../services/Enterpreneurservice";
 import { Entreformdata } from "../interfaces/Entreformdata";
 
-const EnterpriseList: React.FC = () => {
+const Entrepreneur: React.FC = () => {
   const [enterprises, setEnterprises] = useState<Entreformdata[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -92,4 +92,4 @@ const EnterpriseList: React.FC = () => {
   );
 };
 
-export default EnterpriseList;
+export default Entrepreneur;
