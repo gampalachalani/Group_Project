@@ -1,7 +1,95 @@
-// import React from 'react'
+import React, { useEffect, useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { getAllEnterprises } from "../services/Enterpreneurservice";
+import { Entreformdata } from "../interfaces/Entreformdata";
 
-export default function Entrepreneurs() {
+const EnterpriseList: React.FC = () => {
+  const [enterprises, setEnterprises] = useState<Entreformdata[]>([]);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  useEffect(() => {
+    const fetchEnterprises = async () => {
+      const data = await getAllEnterprises();
+      setEnterprises(data);
+      console.log(data);
+    };
+    fetchEnterprises();
+  }, []);
+
+  const filteredEnterprises = enterprises.filter((enterprise) =>
+    enterprise.enterpriseName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    enterprise.enterpriseType.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    enterprise.city.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
-    <div>Entrepreneurs</div>
-  )
-}
+    <div className="container mt-4">
+      <div className="d-flex justify-content-between align-items-center mb-4">
+        <h2 className="text-center">Enterprise List</h2>
+        <div className="input-group" style={{ maxWidth: "400px" }}>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Search by name, type, or city..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+          <div className="input-group-append">
+            <button className="btn btn-primary" type="button">
+              <i className="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className="row">
+        {filteredEnterprises.length > 0 ? (
+          filteredEnterprises.map((enterprise) => (
+            <div key={enterprise.enterpriseId} className="col-md-4">
+              <div className="card mb-3 shadow">
+                {enterprise.imageFile && (
+                  <img
+                    src={`data:${enterprise.contentType};base64,${enterprise.imageFile}`}
+                    className="card-img-top"
+                    alt={enterprise.imageName}
+                    style={{ height: "200px", objectFit: "cover" }}
+                  />
+                )}
+                <div className="card-body">
+                  <h5 className="card-title">{enterprise.enterpriseName}</h5>
+                  <p className="card-text">
+                    <strong>Type:</strong> {enterprise.enterpriseType}
+                  </p>
+                  <p className="card-text">
+                    <strong>Register #:</strong> {enterprise.registerNumber}
+                  </p>
+                  <p className="card-text">
+                    <strong>Founded:</strong> {enterprise.startingDate}
+                  </p>
+                  <p className="card-text">
+                    <strong>Address:</strong> {enterprise.address}, {enterprise.city}
+                  </p>
+                  <p className="card-text">
+                    <strong>Contact:</strong> {enterprise.telNumber}
+                  </p>
+                  <p className="card-text">
+                    <strong>Email:</strong> {enterprise.enterpriseEmail}
+                  </p>
+                  <a href={enterprise.webUrl} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                    Visit Website
+                  </a>
+                  <a href={`/entpProfile/${enterprise.enterpriseId}`} className="btn btn-outline-dark mx-2" rel="noopener noreferrer">
+                    View Profile
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))
+        ) : (
+          <p className="text-center">No enterprises found.</p>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default EnterpriseList;
