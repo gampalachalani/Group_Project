@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { Entreformdata } from "../interfaces/Entreformdata";
 import { getEnterpriseById } from "../services/Enterpreneurservice";
 
-const Entreprofile: React.FC = () => {
+const EntpProfile: React.FC = () => {
   const [enterprise, setEnterprise] = useState<Entreformdata | null>(null);
   const { enterpriseId } = useParams<{ enterpriseId: string }>();
 
@@ -102,4 +102,4 @@ const Entreprofile: React.FC = () => {
   );
 };
 
-export default Entreprofile;
+export default EntpProfile;

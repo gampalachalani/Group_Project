@@ -1,4 +1,4 @@
-export interface InvestFormData {
+export interface Invesformdata {
     investmentId: string;
     userId: string;
     investorName: string;

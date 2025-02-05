@@ -1,10 +1,10 @@
 import axios from "axios";
-import { InvestFormData } from "../interfaces/investformdata";
+import { Invesformdata } from "../interfaces/Invesformdata";
 
 const API_URL = "http://localhost:8080/api/investment";
 
 export const submitInvestorForm = async (
-    formData: InvestFormData,
+    formData: Invesformdata,
     userId: string,
     navigate: (path: string) => void
   ): Promise<void> => {

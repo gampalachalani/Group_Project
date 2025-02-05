@@ -1,6 +1,6 @@
 import axios from "axios";
 import { NavigateFunction } from "react-router-dom";
-import { Entreformdata } from "../interfaces/Entreformdata";
+import { Entreformdata} from "../interfaces/Entreformdata";
 
 const API_URL = "http://localhost:8080/api/enterprise";
 

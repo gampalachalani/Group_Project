@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
-import { InvestFormData } from "../interfaces/InvestFormData";
-
+import { Invesformdata } from "../interfaces/Invesformdata";
 import { getInvestorById } from "../services/Investorservice";
 
 const InvsProfile: React.FC = () => {
-  const [investor, setInvestor] = useState<InvestFormData | null>(null);
+  const [investor, setInvestor] = useState<Invesformdata | null>(null);
   const { investorId } = useParams<{ investorId: string }>();
 
   useEffect(() => {
