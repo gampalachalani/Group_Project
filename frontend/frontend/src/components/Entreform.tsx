@@ -3,7 +3,8 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Alert from 'react-bootstrap/Alert';
 import './Entreform.css';
-import cmplogo from '../components/assets/logo1.png';
+
+import cmplogo from './assets/logo1.png';
 
 
 const Entreform: React.FC = () => {
