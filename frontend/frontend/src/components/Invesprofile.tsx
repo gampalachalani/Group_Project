@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { InvestFormData } from "../interfaces/investformdata";
+
+import { InvestFormData } from "../interfaces/InvestFormData";
+
 import { getInvestorById } from "../services/Investorservice";
 
 const InvsProfile: React.FC = () => {
