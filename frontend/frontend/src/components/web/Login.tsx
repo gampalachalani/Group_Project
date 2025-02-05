@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Login.css';
 import cmplogo from '../components/assets/logo1.png';
-import  {login}  from '../../services/AuthService';
+import  {login}  from '../services/AuthService';
 import { useNavigate } from 'react-router-dom';
 
 const Login: React.FC = () => {
