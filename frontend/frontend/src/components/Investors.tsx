@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { InvestFormData } from "../interfaces/investformdata";
+import { Invesformdata } from "../interfaces/Invesformdata";
 import { getAllInvesters } from "../services/Investorservice";
 
 const InvestorList: React.FC = () => {
-  const [investors, setInvestors] = useState<InvestFormData[]>([]);
+  const [investors, setInvestors] = useState<Invesformdata[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [filteredInvestors, setFilteredInvestors] = useState<InvestFormData[]>([]);
+  const [filteredInvestors, setFilteredInvestors] = useState<Invesformdata[]>([]);
 
   useEffect(() => {
     const fetchInvestors = async () => {

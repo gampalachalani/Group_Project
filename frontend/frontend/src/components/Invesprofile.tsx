@@ -1,26 +1,26 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Entreformdata } from "../interfaces/Entreformdata";
-import { getEnterpriseById } from "../services/Enterpreneurservice";
+import { Invesformdata } from "../interfaces/Invesformdata";
+import { getInvestorById } from "../services/Investorservice";
 
-const EntpProfile: React.FC = () => {
-  const [enterprise, setEnterprise] = useState<Entreformdata | null>(null);
-  const { enterpriseId } = useParams<{ enterpriseId: string }>();
+const InvsProfile: React.FC = () => {
+  const [investor, setInvestor] = useState<Invesformdata | null>(null);
+  const { investorId } = useParams<{ investorId: string }>();
 
   useEffect(() => {
-    const fetchEnterprise = async () => {
-      if (enterpriseId) {
-        const data = await getEnterpriseById(enterpriseId);
-        setEnterprise(data);
+    const fetchInvestor = async () => {
+      if (investorId) {
+        const data = await getInvestorById(investorId);
+        setInvestor(data);
       } else {
-        console.error("Enterprise ID is undefined");
+        console.error("Investor ID is undefined");
       }
     };
-    fetchEnterprise();
-  }, [enterpriseId]);
+    fetchInvestor();
+  }, [investorId]);
 
-  if (!enterprise) {
-    return <div className="text-center mt-5">Loading enterprise details...</div>;
+  if (!investor) {
+    return <div className="text-center mt-5">Loading investor details...</div>;
   }
 
   return (
@@ -39,10 +39,10 @@ const EntpProfile: React.FC = () => {
         <div className="container-fluid d-flex align-items-center mx-5">
           <div className="row">
             <div className="col-lg-7 col-md-10">
-              <h1 className="display-2 text-white">{enterprise.enterpriseName}</h1>
-              <p className="text-white mt-0 mb-5">Welcome to the enterprise profile page.</p>
+              <h1 className="display-2 text-white">{investor.investorName}</h1>
+              <p className="text-white mt-0 mb-5">Investor Profile Page</p>
               <a href="#" className="btn btn-info">
-                Edit profile
+                Edit Profile
               </a>
             </div>
           </div>
@@ -54,17 +54,17 @@ const EntpProfile: React.FC = () => {
           <div className="col-xl-4 order-xl-2 mb-5 mb-xl-0 mt-5">
             <div className="card card-profile shadow">
               <div className="card-body text-center">
-                {enterprise.imageFile && (
+                {investor.imageFile && (
                   <img
-                    src={`data:${enterprise.contentType};base64,${enterprise.imageFile}`}
+                    src={`data:${investor.contentType};base64,${investor.imageFile}`}
                     className="card-img-top rounded"
-                    alt={enterprise.imageName}
+                    alt={investor.imageName}
                     style={{ height: "200px", objectFit: "cover" }}
                   />
                 )}
-                <h3 className="mt-3">{enterprise.enterpriseName}</h3>
-                <p className="text-muted">{enterprise.enterpriseType}</p>
-                <p>{enterprise.city}</p>
+                <h3 className="mt-3">{investor.investorName}</h3>
+                <p className="text-muted">{investor.investorJob}</p>
+                <p>{investor.address}</p>
                 <a href="#" className="btn btn-sm btn-info mr-4">
                   Connect
                 </a>
@@ -77,20 +77,19 @@ const EntpProfile: React.FC = () => {
           <div className="col-xl-8 order-xl-1 mb-5 mt-5">
             <div className="card bg-white shadow p-4">
               <div className="card-header bg-white border-0">
-                <h3 className="mb-0">Enterprise Details</h3>
+                <h3 className="mb-0">Investor Details</h3>
               </div>
               <div className="card-body">
                 <div className="row">
                   <div className="col-md-6">
-                    <p><strong>Email:</strong> {enterprise.enterpriseEmail}</p>
-                    <p><strong>Register Number:</strong> {enterprise.registerNumber}</p>
-                    <p><strong>Enterprise Type:</strong> {enterprise.enterpriseType}</p>
+                    <p><strong>Job:</strong> {investor.investorJob}</p>
+                    <p><strong>Interests:</strong> {investor.investorInterest}</p>
+                    <p><strong>Budget Limit:</strong> {investor.budgetLimit}</p>
                   </div>
                   <div className="col-md-6">
-                    <p><strong>Starting Date:</strong> {enterprise.startingDate}</p>
-                    <p><strong>Address:</strong> {enterprise.address}, {enterprise.city}</p>
-                    <p><strong>Phone:</strong> {enterprise.telNumber}</p>
-                    <p><strong>Website:</strong> <a href={enterprise.webUrl} target="_blank" rel="noopener noreferrer">{enterprise.webUrl}</a></p>
+                    <p><strong>Address:</strong> {investor.address}</p>
+                    <p><strong>Phone:</strong> {investor.telNumber}</p>
+                    <p><strong>Other Details:</strong> {investor.otherDetails}</p>
                   </div>
                 </div>
               </div>
@@ -102,4 +101,4 @@ const EntpProfile: React.FC = () => {
   );
 };
 
-export default EntpProfile;
+export default InvsProfile;
