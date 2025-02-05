@@ -1,5 +1,5 @@
 import axios from "axios";
-import { InvestFormData } from "../interfaces/investformdata";
+import { InvestFormData } from "../interfaces/InvestFormData";
 
 const API_URL = "http://localhost:8080/api/investment";
 

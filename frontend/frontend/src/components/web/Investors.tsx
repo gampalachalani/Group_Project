@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { InvestFormData } from "../interfaces/investformdata";
-import { getAllInvesters } from "../services/Investorservice";
+import { InvestFormData } from "../../interfaces/InvestFormData";
+import { getAllInvesters } from "../../services/Investorservice";
 
 const InvestorList: React.FC = () => {
   const [investors, setInvestors] = useState<InvestFormData[]>([]);
