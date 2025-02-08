@@ -83,7 +83,8 @@ const Entreform: React.FC = () => {
       <img src={cmplogo} alt='Company Logo' />
         </div>
     <Form className="entre-form" onSubmit={handleSubmit}>
-        <h1>Entrepreneur Form</h1>
+              <h1>Get Started Now!</h1>
+              <p className="text-center">It's easy to create a pitch using our online form. Your pitch can be in front of our investors before you know it.</p>
 
       <Form.Group className="mb-3" controlId="formEnterpriseName">
         <Form.Label>Enterprise Name</Form.Label>
