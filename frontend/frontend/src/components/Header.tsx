@@ -16,6 +16,7 @@ const Header: React.FC = () => {
         <a className="nav-link" href="/home">Home</a>
         <a className="nav-link" href="/entrepreneurs">Entrepreneurs</a>
         <a className="nav-link" href="/investors">Investors</a>
+        <a className="nav-link" href="/about-us">About us</a>
       </div>
 
         <div className="search-bar">
