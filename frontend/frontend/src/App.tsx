@@ -12,6 +12,7 @@ import Fundinglist from './components/FundList';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import './App.css'
+import About from './components/About';
 
 const App: React.FC = () => {
   return (
@@ -27,6 +28,7 @@ const App: React.FC = () => {
         <Route path="/funds" element={<Fundinglist />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/about-us" element={<About/>} />
       </Routes>
       <Footer />
     </Router>
